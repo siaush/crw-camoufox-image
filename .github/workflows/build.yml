@@ -49,7 +49,7 @@ jobs:
         with:
           context: ./upstream
           build-args: |
-            CARGO_PKGS=-p crw-server --features cdp,camoufox -p crw-mcp -p crw-cli
+            CARGO_PKGS=-p crw-server --features cdp,impersonated,camoufox -p crw-mcp -p crw-cli
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/crw-camoufox:latest
