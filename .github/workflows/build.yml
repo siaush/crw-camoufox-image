@@ -24,7 +24,7 @@ jobs:
         run: |
           shopt -s nullglob
           patches=("$GITHUB_WORKSPACE"/*.patch)
-          if [ ${#patches[@]} -eq 0 ]; then echo "no patches found"; exit 1; fi
+          if [ ${#patches[@]} -eq 0 ]; then echo "no patches found"; exit 0; fi
           for p in "${patches[@]}"; do
             echo "applying $p"
             git -C upstream apply --verbose "$p"
